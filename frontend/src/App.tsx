@@ -1,5 +1,3 @@
-import { useEffect, useState } from 'react';
-import axios from 'axios';
 import './App.scss';
 
 const App: React.FC = () => {
@@ -12,18 +10,32 @@ const App: React.FC = () => {
     reviewer: string;
   }
 
-  const [books, setBooks] = useState<Book[]>([]);
-
-  useEffect(() => {
-    axios
-      .get(`${process.env.REACT_APP_API_URL}/public/books`)
-      .then((res) => {
-        setBooks(res.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, []);
+  const books: Book[] = [
+    {
+      id: '1',
+      title: 'title',
+      url: 'url',
+      detail: 'detail',
+      review: 'review',
+      reviewer: 'reviewer',
+    },
+    {
+      id: '2',
+      title: 'title2',
+      url: 'url2',
+      detail: 'detail2',
+      review: 'review2',
+      reviewer: 'reviewer2',
+    },
+    {
+      id: '3',
+      title: 'title3',
+      url: 'url3',
+      detail: 'detail3',
+      review: 'review3',
+      reviewer: 'reviewer3',
+    }
+  ];
 
   return (
     <main className="home-wrapper">
