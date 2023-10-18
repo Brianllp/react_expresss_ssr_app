@@ -2,7 +2,7 @@ import './App.scss';
 
 const App: React.FC = () => {
   interface Book {
-    id: string;
+    id: number;
     title: string;
     url: string;
     detail: string;
@@ -12,7 +12,7 @@ const App: React.FC = () => {
 
   const books: Book[] = [
     {
-      id: '1',
+      id: 1,
       title: 'title',
       url: 'url',
       detail: 'detail',
@@ -20,7 +20,7 @@ const App: React.FC = () => {
       reviewer: 'reviewer',
     },
     {
-      id: '2',
+      id: 2,
       title: 'title2',
       url: 'url2',
       detail: 'detail2',
@@ -28,7 +28,7 @@ const App: React.FC = () => {
       reviewer: 'reviewer2',
     },
     {
-      id: '3',
+      id: 3,
       title: 'title3',
       url: 'url3',
       detail: 'detail3',
